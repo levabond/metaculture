@@ -1,0 +1,16 @@
+{
+    "host": "files168.hostinger.ru",
+    "username": "u577780814",
+    "password": "le93BO",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}
