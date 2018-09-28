@@ -16,13 +16,13 @@
  */
 
 get_header(); ?>
-
 <div class="wrap">
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
 		</header>
 	<?php else : ?>
+	<img src="wp-content/uploads/2018/09/1524748874_ayk.jpg" alt="">
 	<header class="page-header">
 		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
 	</header>
@@ -30,7 +30,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<h1>HELLOOOOOOO</h1>
 			<?php
 			if ( have_posts() ) :
 
@@ -61,7 +60,9 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
+	<?php 
+	// get_sidebar();
+	 ?>
 </div><!-- .wrap -->
 
 <?php get_footer();

@@ -41,6 +41,7 @@
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vide/0.4.1/jquery.vide.js"></script>
 <?php wp_footer(); ?>
 
 </body>

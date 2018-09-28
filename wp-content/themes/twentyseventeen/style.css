@@ -51,6 +51,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
+@font-face {
+	font-family: "Furore";
+	src: url("../twentyseventeen/assets/css/Furore.otf");
+}
+
+@font-face {
+	font-family: "Molodost";
+	src: url("../twentyseventeen/assets/css/Molodost.otf");
+}
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
@@ -60,6 +70,7 @@ html {
 
 body {
 	margin: 0;
+	background: #252525
 }
 
 article,
@@ -416,7 +427,7 @@ button,
 input,
 select,
 textarea {
-	color: #333;
+	color: #333D43;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -434,6 +445,7 @@ h6 {
 	line-height: 1.4;
 	margin: 0 0 0.75em;
 	padding: 1.5em 0 0;
+	font-family: "Furore", Courier, monospace
 }
 
 h1:first-child,
@@ -453,7 +465,7 @@ h1 {
 
 h2,
 .home.blog .entry-title {
-	color: #666;
+	color: #BF0C2B;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-weight: 300;
@@ -492,6 +504,7 @@ h6 {
 p {
 	margin: 0 0 1.5em;
 	padding: 0;
+	font-family: "Molodost", Courier, monospace;
 }
 
 dfn,
@@ -1162,17 +1175,18 @@ td:last-child {
 a {
 	color: #222;
 	text-decoration: none;
+	border: none;
 }
 
 a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
+/* a:hover,
 a:active {
 	color: #000;
 	outline: 0;
-}
+} */
 
 /* Hover effects */
 
@@ -1520,7 +1534,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #252525;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -1552,7 +1566,7 @@ body {
 }
 
 .site-header {
-	background-color: #fafafa;
+	background-color: #000;
 	position: relative;
 }
 
@@ -1867,7 +1881,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 --------------------------------------------------------------*/
 
 .site-content-contain {
-	background-color: #fff;
+	background-color: #000000;
 	position: relative;
 }
 
@@ -1914,7 +1928,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .entry-title a {
-	color: #333;
+	color: #760023;
 	text-decoration: none;
 	margin-left: -2px;
 }
@@ -3376,7 +3390,7 @@ p > object:only-child {
 
 	.has-sidebar:not(.error404) #primary {
 		float: left;
-		width: 58%;
+		width: 100%;
 	}
 
 	.has-sidebar #secondary {
@@ -3857,10 +3871,10 @@ p > object:only-child {
 		width: 58%;
 	}
 
-	.blog .site-main > article,
-	.archive .site-main > article,
-	.search .site-main > article {
-		padding-bottom: 4em;
+	.blog .site-main > article {
+		margin-bottom: 4em;
+    border: 1px solid #cccccc17;
+    padding: 1em;
 	}
 
 	.navigation.pagination {
