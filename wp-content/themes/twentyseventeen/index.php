@@ -22,7 +22,6 @@ get_header(); ?>
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
 		</header>
 	<?php else : ?>
-	<img src="wp-content/uploads/2018/09/1524748874_ayk.jpg" alt="">
 	<header class="page-header">
 		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
 	</header>

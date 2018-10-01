@@ -18,6 +18,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
+			<section>fury</section>
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
 
@@ -34,14 +35,15 @@
 						?>
 					</nav><!-- .social-navigation -->
 				<?php endif;
-
-				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vide/0.4.1/jquery.vide.js"></script>
+<script>
+	console.warn('SUCK MY DICK');
+</script>
 <?php wp_footer(); ?>
 
 </body>

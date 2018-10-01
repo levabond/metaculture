@@ -16,10 +16,8 @@
 
 ?>
 <div>
-	<div style="width: 50%; height: 30vh; z-index: 10; margin: 0 auto;"
-  	data-vide-bg="wp-content/uploads/2018/09/metaculture"
-		data-vide-options="loop: true, muted: true, position: 50% 50%">
-
-	</div>
-
+	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item"><a href="#">Heart</a></li>
+	</ul>
 </div><!-- .custom-header -->
