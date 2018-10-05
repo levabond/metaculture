@@ -410,7 +410,18 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  */
 function twentyseventeen_scripts() {
 	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'slickcss', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null );
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
+	wp_enqueue_script( 'jquery1', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array( ), null, false );
+
+	wp_enqueue_script( 'carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery1' ), null, false );
+
+	// wp_enqueue_script( 'support', get_theme_file_uri( '/assets/js/owl/js/owl.support.js' ), array( 'jquery1' ), null, true );
+
+	// wp_enqueue_script( 'autoplay', get_theme_file_uri( '/assets/js/owl/js/owl.autoplay.js' ), array( 'jquery1' ), null, true );
+
+	wp_enqueue_script( 'core', get_theme_file_uri( '/assets/js/owl/js/core.js' ), array( 'carousel' ), null, true );
+	// wp_enqueue_script( 'autoplay2', get_theme_file_uri( '/assets/js/owl/js/autoplay.js' ), array( 'jquery1' ), null, true );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_uri() );
@@ -419,6 +430,7 @@ function twentyseventeen_scripts() {
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
 		wp_enqueue_style( 'twentyseventeen-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'twentyseventeen-style' ), '1.0' );
 	}
+
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
@@ -442,14 +454,16 @@ function twentyseventeen_scripts() {
 
 	if ( has_nav_menu( 'top' ) ) {
 		wp_enqueue_script( 'twentyseventeen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		
 		$twentyseventeen_l10n['expand']         = __( 'Expand child menu', 'twentyseventeen' );
 		$twentyseventeen_l10n['collapse']       = __( 'Collapse child menu', 'twentyseventeen' );
 		$twentyseventeen_l10n['icon']           = twentyseventeen_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
 	}
 
-	wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
-
-	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
+		// <script src="../src/js/owl.carousel.js" data-cover></script>
+		// <script src="../src/js/owl.support.js" data-cover></script>
+		// <script src="../src/js/owl.autoplay.js" data-cover></script>
+	// wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
 
 	wp_localize_script( 'twentyseventeen-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
 

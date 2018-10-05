@@ -17,7 +17,5 @@
 ?>
 <div>
 	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-	<ul class="navbar-nav mr-auto">
-		<li class="nav-item"><a href="#">Heart</a></li>
-	</ul>
+
 </div><!-- .custom-header -->

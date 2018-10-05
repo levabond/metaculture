@@ -10,9 +10,16 @@
 
 ?>
 <div class="site-branding">
+		<ul class="menu-header">
+			<li class="nav-item"><a href="/heart">Sex</a></li>
+			<li class="nav-item"><a href="/heart">Fury</a></li>
+			<li class="nav-item"><a href="/heart">Love</a></li>
+			<li class="nav-item"><a href="/heart">Antihero</a></li>
+			<li class="nav-item"><a href="/heart">Duty</a></li>
+			<li class="nav-item"><a href="/heart">Redemption</a></li>
+		</ul>
 	<div class="wrap">
-
-		<?php the_custom_logo(); ?>
+	
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	
 			<div style="width: 100%; max-width: 900px; height: 30vh; z-index: 10; margin: 0 auto;"
 				data-vide-bg="/wp-content/uploads/2018/09/metaculture"

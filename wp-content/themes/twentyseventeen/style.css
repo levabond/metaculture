@@ -58,7 +58,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 
 @font-face {
 	font-family: "Molodost";
-	src: url("../twentyseventeen/assets/css/Molodost.otf");
+	src: url("../twentyseventeen/assets/css/SegoeUI.woff");
 }
 
 html {
@@ -2326,7 +2326,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 --------------------------------------------------------------*/
 
 .site-footer {
-	border-top: 1px solid #eee;
+	border-top: 1px solid #9c27b085
 }
 
 .site-footer .wrap {
@@ -3885,9 +3885,18 @@ p > object:only-child {
 		padding: 1em;
 		transition: all .3s ease-in-out;
 	}
+	
+	.blockArticle {
+		margin-bottom: 4em;
+		border: 1px solid #cccccc17;
+		box-shadow: 0 0 20px #760023;
+		padding: 1em;
+		transition: all .3s ease-in-out;
+	}
 
 	.blog .site-main > article {
 		margin-bottom: 4em;
+		position: relative;
 		border: 1px solid #cccccc17;
 		box-shadow: 0 0 20px #760023;
 		padding: 1em;
@@ -3895,8 +3904,12 @@ p > object:only-child {
 		border-radius: 3px;
 	}
 
+	.blog .site-main > article a {
+		position: relative;
+	}
+
 	.blog .site-main > article:hover {
-		box-shadow: 0 0 30px 10px #760023;
+		box-shadow: 0 0 10px 1px #760023;
     border: 1px solid #252525;
 	}
 
@@ -4364,7 +4377,19 @@ p > object:only-child {
 }
 .entry-content {
 	display: block;
+	color: #fff;
 }
+
+.entry-content p {
+	font-size: 1.2em;
+	font-family: 'Molodost', Courier, monospace;
+}
+
+.entry-content a {
+	color: #fff;
+	font-size: 1.2em;
+}
+
 	.blog .site-main > article {
 		margin-bottom: 4em;
 		border: 1px solid #cccccc17;
@@ -4372,11 +4397,102 @@ p > object:only-child {
 		padding: 1em;
 		transition: all .3s ease-in-out;
 		border-radius: 3px;
-		max-height: 130px;
+		/* max-height: 150px; */
 		overflow: hidden;
 	}
 
 	.blog .site-main > article:active {
-		box-shadow: 0 0 30px 10px #760023;
+		box-shadow: 0 0 10px 1px #760023;
     border: 1px solid #252525;
+	}
+
+	.menu-header {
+		width: auto;
+		margin: 0 auto 3em;
+		list-style: none;
+		text-align: center;
+		box-shadow: 0 0 10px 3px #09048C;
+	}
+
+/* @media min-width() */
+
+
+	.menu-header li {
+		display: inline-block;
+	}
+
+	.menu-header li a {
+		display: block;
+    color: #fff;
+    font-family: 'Furore', Courier, monospace;
+    font-size: 1em;
+    margin: 0;
+    padding: 1em;
+    letter-spacing: 2px;
+		transition: all .3s ease-in-out;
+	}
+
+	@media screen and (min-width: 320px) and (max-width: 900px) {
+		.menu-header li {
+			display: inline;
+		}
+
+		.menu-header li a {
+			padding: 0 1em;
+		}
+	}
+
+	.menu-header li a:hover {
+		background: #760023;
+	}
+
+	.menu-header li a.heart {
+	}
+
+	.carousel {
+		width: 100%;
+		margin: 0 auto;
+		background: #000;
+    text-align: center;
+	}
+
+	.carousel-item {
+		height: 300px;
+		width: 300px;
+		padding: 1em;
+		margin: 1em 0;
+		max-height: 300px;
+		position: relative;
+	}
+
+	.carousel-item p {
+		background: #9C27B0;
+    position: absolute;
+    color: #fff;
+    bottom: 1em;
+    width: 70%;
+    margin: 1em 0.5em;
+	}
+
+	.carousel-content {
+		padding: 1em;
+    display: block;
+    box-shadow: 0 0 13px 0.1px #CC00FF;
+    height: 100%;
+		width: 100%;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.carousel-content:hover {
+		box-shadow: 0 0 13px 5px #CC00FF;
+	}
+
+	.articleBlock {
+		filter: grayscale(100%);
+		width: 100%; height: 100%; position: absolute; z-index: 0; top: 0; right: 0;
+		transition: all .3s ease-in-out;
+	}
+
+	.blockArticle:hover > .articleBlock {
+		filter: grayscale(0%);
 	}

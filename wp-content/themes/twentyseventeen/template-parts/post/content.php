@@ -16,10 +16,12 @@
 						if ( is_home()  ) {
 							echo 'class="blockArticle"';
 						}?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>
-						<?php if ( is_home() && false !== the_post_thumbnail_url() ) : ?>
-							style="background: 50% 50% url(<?php the_post_thumbnail_url( 'twentyseventeen-featured-image' ); ?>);     background-size: cover;"
-						<?php endif; ?>
 						>
+	<div 	<?php if ( is_home() && false !== the_post_thumbnail_url() ) : ?>
+							class='articleBlock'
+							style="
+							background: linear-gradient(0, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.2) 30%), 50% 50% url(<?php the_post_thumbnail_url( 'twentyseventeen-featured-image' ); ?>);     background-size: cover;"
+						<?php endif; ?>></div>
 	<?php
 	if ( is_front_page() && is_home()  ) {
 		echo '<a href="' . esc_url( get_permalink() ) . '" >';
@@ -42,12 +44,13 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
-		/* translators: %s: Name of current post */
-		the_content( sprintf(
-			__( '<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-			get_the_title()
-		) );
 
+		/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( '<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+				get_the_title()
+			) );
+		
 		// wp_link_pages( array(
 		// 	'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
 		// 	'after'       => '</div>',
