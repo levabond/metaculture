@@ -12,7 +12,8 @@
 
 ?>
 
-<article <?php 
+<article onClick="goToPost(this)" data-url="<?php echo esc_url( get_permalink() )?>"
+				<?php 
 						if ( is_home()  ) {
 							echo 'class="blockArticle"';
 						}?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>
@@ -66,8 +67,8 @@
 	// 	twentyseventeen_entry_footer();
 	// }
 	?>
-<?php 
-						if ( is_home()  ) {
-							echo '</a>';
-						}?>
+	<?php 
+							if ( is_home()  ) {
+								echo '</a>';
+							}?>
 </article><!-- #post-## -->

@@ -18,7 +18,6 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
-				<p>2018 (c)</p>
 				<p>What goes around come around</p>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
