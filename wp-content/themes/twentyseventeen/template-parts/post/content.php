@@ -12,7 +12,9 @@
 
 ?>
 
-<article onClick="goToPost(this)" data-url="<?php echo esc_url( get_permalink() )?>"
+<article
+	 onClick="<?php  if ( is_front_page() && is_home() ) { echo "goToPost(this)"; } ?>"
+	data-url="<?php echo esc_url( get_permalink() )?>"
 				<?php 
 						if ( is_home()  ) {
 							echo 'class="blockArticle"';
